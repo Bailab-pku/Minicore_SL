@@ -1,5 +1,5 @@
 # Minicore_SL
-All intermediate data and computational scripts employed in the computational analyses are available here
+The repository contains all the intermediate data and computational scripts used in the computational analysis of the study by Zhang et al.
 
 # Referernce
 If you find the data and code available, please, include the following citation:
