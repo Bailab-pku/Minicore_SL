@@ -108,8 +108,8 @@ p2
 
 p<-p1+p2
 
-ggsave("FigS2A_B.pdf",p,width=8,height = 3)
-#ggsave("FigS2A_B.png",p,width=8,height = 3)
+ggsave("FigS1E_F.pdf",p,width=8,height = 3)
+#ggsave("FigS1E_F.png",p,width=8,height = 3)
 ```
 
 ## Fig1EF Overlap of bacterial genera positively (E) or negatively (F) correlated with tiller number of rice varieties grown in the two test fields.
