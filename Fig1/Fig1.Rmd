@@ -60,12 +60,12 @@ ggsave("FigS1D.pdf",p, width = 3, height = 3)
 ```{r}
 Tiller_cor<-read.csv("dataForFig1CDS2AB.tsv",sep="\t",check.names = F)
 
-cor_FieldI_shannon_e<-cor.test(Tiller_cor$`Field I shannon_e`,Tiller_cor$`Field I Tiller`,method="spearman")
+cor_FieldI_shannon_index<-cor.test(Tiller_cor$`Field I shannon_index`,Tiller_cor$`Field I Tiller`,method="spearman")
 
-p1<-ggplot(Tiller_cor,aes(`Field I shannon_e`,`Field I Tiller`))+
+p1<-ggplot(Tiller_cor,aes(`Field I shannon_index`,`Field I Tiller`))+
   geom_point(alpha=0.8)+geom_smooth(method="lm")+
-  labs(title = paste("Rho = " , round(cor_FieldI_shannon_e$estimate, digits = 2),
-                     ", P = " , signif(cor_FieldI_shannon_e$p.value, digits = 2) , sep = ""))+
+  labs(title = paste("Rho = " , round(cor_FieldI_shannon_index$estimate, digits = 2),
+                     ", P = " , signif(cor_FieldI_shannon_index$p.value, digits = 2) , sep = ""))+
   theme_bw()
 
 p1
@@ -86,12 +86,12 @@ ggsave("Fig1C_D.pdf",p,width=8,height = 3)
 #ggsave("Fig1C_D.pdf",p,width=8,height = 3)
 
 
-cor_FieldII_shannon_e<-cor.test(Tiller_cor$`Field II shannon_e`,Tiller_cor$`Field II Tiller`,method="spearman")
+cor_FieldII_shannon_index<-cor.test(Tiller_cor$`Field II shannon_index`,Tiller_cor$`Field II Tiller`,method="spearman")
 
-p1<-ggplot(Tiller_cor,aes(`Field II shannon_e`,`Field II Tiller`))+
+p1<-ggplot(Tiller_cor,aes(`Field II shannon_index`,`Field II Tiller`))+
   geom_point(alpha=0.8)+geom_smooth(method="lm")+
-  labs(title = paste("Rho = " , round(cor_FieldII_shannon_e$estimate, digits = 2),
-                     ", P = " , signif(cor_FieldII_shannon_e$p.value, digits = 2) , sep = ""))+
+  labs(title = paste("Rho = " , round(cor_FieldII_shannon_index$estimate, digits = 2),
+                     ", P = " , signif(cor_FieldII_shannon_index$p.value, digits = 2) , sep = ""))+
   theme_bw()
 
 p1
